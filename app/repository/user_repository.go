@@ -6,7 +6,7 @@ import (
 )
 
 type UserRepository interface {
-    GetUsers() []*models.User
+	GetUsers() []*models.User
 	GetUserById(id string) (*models.User, error)
 	SaveUser(user *models.User) error
 }
@@ -27,7 +27,7 @@ func New() *DBUserRepository {
 }
 
 func (r *DBUserRepository) GetUsers() []*models.User {
-    return r.users
+	return r.users
 }
 
 func (r *DBUserRepository) GetUserById(id string) (*models.User, error) {
