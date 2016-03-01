@@ -21,6 +21,8 @@ Note that the project must be located under <code>$GOPATH/src/go-revel-rest</cod
 
 The API routes are defined in <code>conf/routes</code> file:
 
-<code>GET /users/{id}</code> Returns user with id {id}
+<code>GET /users</code> Retrieve all the users {id}
+
+<code>GET /users/{id}</code> Retrieve user with id {id}
 
 <code>PUT /users/</code> Save a new user. <code>id</code> and <code>nickname</code> must be provided as form params.
