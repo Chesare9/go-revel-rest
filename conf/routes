@@ -1,4 +1,5 @@
 module:testrunner
 
+GET     /users                                      UserController.GetUsers
 GET     /users/:id                                  UserController.GetUserById
 PUT     /users                                      UserController.SaveUser

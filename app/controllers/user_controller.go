@@ -24,6 +24,16 @@ func (c UserController) GetUserById(id string) revel.Result {
 	return c.RenderJson(response)
 }
 
+func (c UserController) GetUsers() revel.Result {
+
+	users := repository.GetUserRepository().GetUsers()
+
+	response := JsonResponse{}
+	response.Data = users
+
+	return c.RenderJson(response)
+}
+
 func (c UserController) SaveUser(id, nickname string) revel.Result {
 
 	user := &models.User{
